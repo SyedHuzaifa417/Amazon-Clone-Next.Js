@@ -22,7 +22,7 @@ const Header = () => {
                     <HiOutlineLocationMarker className="text-white font-bold text-lg"/>
                     <div className="text-xs">
                       <p>Deliver to</p>
-                      <p className="text-white font-bold uppercase">Pakistan</p>
+                      <p className="text-white font-bold font-bodyFont">Pakistan</p>
                     </div>
                 </div>
             </div>
@@ -36,7 +36,7 @@ const Header = () => {
              <HiOutlineSearch/>
                 </span>
             </div>
-           
+     
             <div className="flex items-stretch justify-center gap-2">
              <div className="text-xs text-gray-100 flex flex-col justify-center px-2 border
             border-transparent hover:border-white cursor-pointer duration-300 h-14 relative">

@@ -6,7 +6,7 @@ const HeaderBottom = () =>{
   
     return <div className="w-full h-10 text-sm bg-amazon_light text-white px-2 flex
     items-center">
-        <p className="flex font-bold items-center gap-1 h-10 px-2 border border-transparent
+        <p className="flex font-bold font-bodyFont items-center gap-1 h-10 px-2 border border-transparent
         hover:border-white cursor-pointer duration-300 ">
             <LuMenu className="text-white font-bold text-xl"/>All
         </p>
