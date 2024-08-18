@@ -3,8 +3,10 @@ import { useSelector } from "react-redux";
 import { StoreProduct, stateProps } from "../../type";
 import CartProduct from "@/components/CartProduct";
 import ResetCart from "@/components/ResetCart";
-import Link from "next/link";
+import cartEmpty from "@/assets/cartEmpty.svg";
 import CartPayment from "@/components/CartPayment";
+import Image from "next/image";
+import Link from "next/link";
 
 const CartPage = () => {
   const { productData } = useSelector((state: stateProps) => state.next);
@@ -24,7 +26,7 @@ const CartPage = () => {
             </div>
             <div>
               {productData.map((item: StoreProduct) => (
-                <div key={item.id} className="pt-2 flex flex-col gap-2">
+                <div key={item.id} className="py-3 flex flex-col gap-2">
                   <CartProduct item={item} />
                 </div>
               ))}
@@ -34,27 +36,45 @@ const CartPage = () => {
           </div>
 
           <div
-            className="bg-white h-64 col-span-1 rounded-lg flex
+            className="bg-white w-72 px-6 h-64 col-span-1 rounded-lg flex
                     items-center justify-center"
           >
             <CartPayment />
           </div>
         </>
       ) : (
-        <div
-          className="bg-white h-64 col-span-5 flex flex-col items-center
-                justify -center py-5 rounded-lg shadow-lg"
-        >
-          <h1 className="text-lg font-medium">Your Cart is Empty</h1>
-          <Link href="/">
-            <button
-              className="w-52 h-10 bg-amazon_blue text-white rounded-text-sm
-                    font-semibold hover:bg-amazon_yellow hover:text-black"
-            >
-              Go to Shopping
-            </button>
-          </Link>
-        </div>
+        <>
+          <div
+            className="bg-white h-80 col-span-5 flex items-start
+                justify-start py-14 px-10 rounded-lg shadow-lg "
+          >
+            <div className="mb-6 mr-14">
+              <Image src={cartEmpty} alt="emptyCart" width={400} />
+            </div>
+            <div>
+              <h1 className="text-xl font-medium mb-1">
+                Your Amazon Cart is empty
+              </h1>
+              <p className="text-sm text-gray-600 mb-4">
+                Shop today&apos;s deals
+              </p>
+              <div className="flex space-x-4">
+                <Link href="/">
+                  <button className="px-4 py-2 bg-yellow-400 text-black  font-semibold hover:bg-yellow-500 rounded-full">
+                    Continue Shopping
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+          <p className=" col-span-4 font-normal text-sm">
+            The price and availability of items at Amazon.com are subject to
+            change. The Cart is a temporary place to store a list of your items
+            and reflects each item&apos;s most recent price.
+            <br /> Do you have a gift card or promotional code? We&apos;ll ask
+            you to enter your claim code when it&apos;s time to pay.
+          </p>
+        </>
       )}
     </div>
   );

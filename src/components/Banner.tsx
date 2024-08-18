@@ -7,33 +7,41 @@ import sliderImg_4 from "../assets/slider/toys.jpg";
 import sliderImg_5 from "../assets/slider/beauty.jpg";
 
 import Image from "next/image";
+import Link from "next/link";
 
 const Banner = () => {
+  const slides = [
+    { image: sliderImg_1, category: "kitchen" },
+    { image: sliderImg_2, category: "home" },
+    { image: sliderImg_3, category: "gaming" },
+    { image: sliderImg_4, category: "toys" },
+    { image: sliderImg_5, category: "women" },
+  ];
+
   return (
     <div className="relative">
       <Carousel
-        autoPlay
-        infiniteLoop
+        infiniteLoop={true}
         showStatus={false}
         showIndicators={false}
+        showThumbs={false}
         interval={3000}
       >
-        <div>
-          <Image priority src={sliderImg_1} alt="sliderImg" />
-        </div>
-        <div>
-          <Image src={sliderImg_2} alt="sliderImg" />
-        </div>
-        <div>
-          <Image src={sliderImg_3} alt="sliderImg" />
-        </div>
-        <div>
-          <Image src={sliderImg_4} alt="sliderImg" />
-        </div>
-        <div>
-          <Image src={sliderImg_5} alt="sliderImg" />
-        </div>
+        {slides.map((slide, index) => (
+          <div key={index}>
+            <Link href={`/products?category=${slide.category}`}>
+              <div className="cursor-pointer">
+                <Image
+                  priority={index === 0}
+                  src={slide.image}
+                  alt={`${slide.category} category`}
+                />
+              </div>
+            </Link>
+          </div>
+        ))}
       </Carousel>
+      <div className="w-full h-96 bg-gradient-to-t from-[#e3e6e6] to-transparent absolute bottom-0 z-20"></div>
     </div>
   );
 };

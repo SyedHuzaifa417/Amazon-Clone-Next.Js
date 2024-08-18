@@ -27,7 +27,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-amazon_light text-gray-400">
+    <footer className="bg-amazon_light text-gray-400 mt-6">
       {visible && (
         <div
           onClick={scrollToTop}
@@ -37,7 +37,7 @@ const Footer = () => {
         </div>
       )}
       <div className="py-8">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-around">
           <div className="mb-6 sm:mb-0 sm:px-8">
             <h5 className="text-xl font-bold tracking-tight text-gray-200">
               Get to Know Us
@@ -194,7 +194,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="w-full h-px bg-gray-700 my-5"></div>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-8 flex flex-col sm:flex-row justify-between items-center">
+      <div className="container mx-auto p-4 sm:p-6 lg:p-8 flex flex-col sm:flex-row justify-around items-center">
         <div>
           <Link href="/" className="flex items-center">
             <Image

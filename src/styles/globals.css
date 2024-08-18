@@ -6,4 +6,22 @@
 
 body {
   background-color: #e3e6e6;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Hide scrollbar for WebKit browsers (e.g., Chrome, Safari) */
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #000000;
 }

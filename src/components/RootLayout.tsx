@@ -10,16 +10,16 @@ interface Props {
 
 const RootLayout = ({ children }: Props) => {
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Head>
-        <title>Amazon.com.Spend less.Smile more.</title>
+        <title>Amazon.com. Spend less. Smile more.</title>
         <meta name="syed huzaifa" content="project..." />
       </Head>
       <Header />
       <HeaderBottom />
-      {children}
+      <main className="flex-grow">{children}</main>
       <Footer />
-    </>
+    </div>
   );
 };
 
