@@ -116,10 +116,15 @@ const Header = () => {
           >
             {userInfo ? (
               <div className="flex items-center px-2 border border-transparent hover:border-white cursor-pointer duration-300 h-[70%] gap-1">
-                <img
+                <Image
                   src={userInfo.image}
                   alt="userImage"
-                  className="w-8 h-8 rounded-full object-cover"
+                  width={32}
+                  height={32}
+                  className="rounded-full object-cover"
+                  layout="fixed"
+                  quality={100}
+                  priority={true}
                 />
                 <div
                   className="text-xs text-gray-100 flec flex-col

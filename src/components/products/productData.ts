@@ -56,7 +56,7 @@ export const products: ProductCardProps[] = [
   },
 
   {
-    title: "Shop smartwatches",
+    title: "Watches",
     link: "/products?category=smartwatches",
     imageUrl: images.watches,
   },
