@@ -1,28 +1,75 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Amazon Clone
+
+A fully functional Amazon clone built with Next.js, MongoDB, Tailwind CSS, Stripe for payments, and NextAuth for authentication. This project demonstrates the integration of various modern web technologies to create a responsive and scalable e-commerce platform.
+
+## Features
+
+- **Next.js**: Server-side rendering, API routes, and dynamic routing.
+- **MongoDB**: Database for storing product details, user information, and orders.
+- **Tailwind CSS**: Utility-first CSS framework for styling the application.
+- **Stripe**: Secure payment processing integration.
+- **NextAuth**: Authentication and authorization with Google login.
+- **Responsive Design**: Fully responsive and mobile-friendly layout.
+
+## Screenshots
+
+![image](https://github.com/user-attachments/assets/1bd23d1c-3119-43da-9b29-c0af90dc8f33)
+![image](https://github.com/user-attachments/assets/f3a45c13-5a3e-4524-a7a2-22990a1c6228)
+
+
+## Demo
+
+[https://amazon-next-js-lyart.vercel.app/](https://amazon-next-js-lyart.vercel.app/)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js (v14.x or later)
+- MongoDB (MongoDB Atlas)
+- Stripe account
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+1. **Clone the repository:**
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+   ```bash
+   git clone https://github.com/SyedHuzaifa417/Amazon-Clone-Next.js.git
+   cd Amazon-Clone-Next.js
+   
+2. **Install dependencies:**
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+   ```bash
+    npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3. **Set up environment variables:**
+
+   Create a .env.local file in the root of the project and add the following environment variables:  
+
+    ```bash
+    NEXTAUTH_URL=http://localhost:3000
+    NEXTAUTH_SECRET=your-nextauth-secret
+    GOOGLE_CLIENT_SECRET=your-google-client-secret
+    NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your-stripe-publishable-key
+    STRIPE_SECRET_KEY=your-stripe-secret-key
+    AUTH_TRUST_HOST=true
+    password=your Mongodb password
+
+4. **Run the development server:**
+
+   ```bash
+   npm run dev
+
+  The app will be available at http://localhost:3000.
+
+
+## Usage
+
+- **Product Browsing:** View products by category, search for items, and filter results.
+- **Authentication:** Sign in with Google using NextAuth.
+- **Shopping Cart:** Add items to the cart and proceed to checkout.
+- **Stripe Payments:** Secure payment processing via Stripe.
+- **Order History:** View past orders and order details.
 
 ## Learn More
 
@@ -30,8 +77,17 @@ To learn more about Next.js, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request with your changes.
+
+
+## Acknowledgments
+
+- Thanks to the creators of Next.js, MongoDB, Tailwind CSS, Stripe, and NextAuth for the powerful tools and frameworks.
+- Inspired by the original Amazon platform.
 
 ## Deploy on Vercel
 
