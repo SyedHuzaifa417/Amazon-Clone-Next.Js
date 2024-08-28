@@ -26,25 +26,28 @@ const Banner = () => {
         showThumbs={false}
         interval={3000}
         className="max-w-screen-2xl mx-auto"
+        renderItem={(item, { isSelected }: any) => (
+          <div className="relative aspect-[16/9] sm:aspect-[21/9] md:aspect-[25/9] lg:aspect-[25/9]">
+            {item}
+          </div>
+        )}
       >
         {slides.map((slide, index) => (
-          <div
+          <Link
             key={index}
-            className="relative aspect-[16/9] sm:aspect-[21/9] md:aspect-[25/9] lg:aspect-[25/9]"
+            href={`/products?category=${slide.category}`}
+            passHref
           >
-            <Link href={`/products?category=${slide.category}`}>
-              <div className="cursor-pointer">
-                <Image
-                  priority={index === 0}
-                  src={slide.image}
-                  alt={`${slide.category} category`}
-                  layout="fill"
-                  objectFit="cover"
-                  className="w-full h-full"
-                />
-              </div>
-            </Link>
-          </div>
+            <div className="w-full h-full cursor-pointer">
+              <Image
+                priority={index === 0}
+                src={slide.image}
+                alt={`${slide.category} category`}
+                layout="fill"
+                objectFit="cover"
+              />
+            </div>
+          </Link>
         ))}
       </Carousel>
       <div className="w-full h-16 sm:h-24 md:h-32 lg:h-40 bg-gradient-to-t from-[#e3e6e6] to-transparent absolute bottom-0 z-20"></div>
