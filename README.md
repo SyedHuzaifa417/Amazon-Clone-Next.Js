@@ -19,7 +19,7 @@ A fully functional Amazon clone built with Next.js, MongoDB, Tailwind CSS, Strip
 
 ## Demo
 
-[https://amazon-next-js-lyart.vercel.app/](https://amazon-next-js-lyart.vercel.app/)
+[https://amazon-next-js-lyart.vercel.app/](https://amazon-clone-next-js-ecru.vercel.app/)
 
 ## Getting Started
 
